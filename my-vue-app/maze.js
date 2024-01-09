@@ -292,7 +292,7 @@ function checkCollision() {
 
             if (level > 2){
                 level += 1;
-                playerDirection.set(0.2,0, 0); // Stop player movement
+                
                 let sizeofmaze = Math.floor(Math.random() * (10 - 5) + 5);
                 let mazes1 = createmazess(sizeofmaze, sizeofmaze);
                 mazes1 = printmazes(addFrameAround(mazes1));
@@ -303,7 +303,8 @@ function checkCollision() {
                 level += 1;
             }
                         //add text to the screen you lose
-
+                playerDirection.set(0, 0, 0); // Stop player movement
+            playerDirection.set(0.1,0, 0); // Stop player movement
             createMaze(level);
             return; // Exit the function after resetting the position and moving to the next level
         }
